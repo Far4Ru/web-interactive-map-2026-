@@ -1,0 +1,159 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 480px;
+  overflow: clip;
+  background: #dce9df;
+  touch-action: none;
+}
+.landscape {
+  position: absolute;
+  inset: 0;
+  background: url("../assets/town-painted.webp") repeat-x center / auto 100%;
+}
+.night .landscape {
+  filter: brightness(0.62) saturate(0.77) hue-rotate(12deg);
+}
+.night .venue .building-art {
+  filter: brightness(0.8);
+}
+.world {
+  position: absolute;
+  inset: 0;
+  width: 16000px;
+  will-change: transform;
+  pointer-events: none;
+}
+.ground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5320px;
+  width: 15960px;
+  background: url("../assets/town-painted.webp") repeat-x center / auto 100%;
+  mask-image: linear-gradient(to bottom, transparent 0 50%, #000 70%);
+  pointer-events: none;
+}
+.venue {
+  position: absolute;
+  bottom: 24%;
+  width: 350px;
+  height: 350px;
+  transform: translateX(-50%);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  pointer-events: auto;
+}
+.venue:hover:not(:disabled),
+.venue:active:not(:disabled) {
+  background: transparent;
+  transform: translateX(-50%);
+}
+.building-art {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  background: url("../assets/buildings-clean.webp") no-repeat;
+  background-size: 400% 200%;
+}
+.venue .building-art {
+  transition: filter 0.2s;
+}
+.venue:hover .building-art,
+.venue:focus-visible .building-art {
+  filter: drop-shadow(0 0 13px #fff6a0) drop-shadow(0 0 2px #517f50);
+}
+.venue-sign,
+.noticeboard-sign {
+  display: block;
+  width: 240px;
+  height: 240px;
+  background: url("../assets/signs-painted.webp") no-repeat;
+  background-size: 400% 200%;
+}
+.venue-sign {
+  position: absolute;
+  left: 50%;
+  top: -139px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.noticeboard {
+  position: absolute;
+  z-index: 1;
+  bottom: 23%;
+  width: 240px;
+  height: 240px;
+  transform: translateX(-50%);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  pointer-events: auto;
+}
+.noticeboard:hover:not(:disabled) {
+  background: transparent;
+  transform: translateX(-50%);
+  filter: brightness(1.08);
+}
+.noticeboard-sign {
+  background-position: 100% 100%;
+}
+.inside {
+  --interior-base: 17%;
+  background: #d9ceb8;
+}
+.interior-controls {
+  display: none;
+}
+.inside .landscape {
+  opacity: 0.82;
+}
+.interior-toolbar {
+  position: absolute;
+  z-index: 5;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  width: 170px;
+  padding: 12px;
+  background: #fffdf5f2;
+  border: 1px solid #bdcbb3;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px #0002;
+}
+.interior-toolbar-left {
+  left: 16px;
+}
+.interior-toolbar-right {
+  right: 16px;
+}
+.interior-toolbar strong,
+.interior-toolbar #interior-floor-label {
+  display: block;
+  font-size: 12px;
+}
+.interior-toolbar #interior-floor-label {
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.interior-toolbar button {
+  white-space: normal;
+}
+.interior-session-label {
+  display: grid;
+  gap: 4px;
+  font-size: 10px;
+}
+.interior-session-label select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #bed1b9;
+  border-radius: 7px;
+  background: #fff;
+}

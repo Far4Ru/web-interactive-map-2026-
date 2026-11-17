@@ -1,0 +1,150 @@
+.interior-module,
+.stair-tile,
+.exit-tile {
+  position: absolute;
+  width: var(--room-width);
+  height: var(--floor-height);
+  min-height: 0;
+  padding: 0;
+  border: 2px solid #6f5039;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+  overflow: hidden;
+  transform: none;
+}
+.interior-module {
+  box-shadow: inset 0 -9px 0 #6f503955;
+}
+.interior-module:hover:not(:disabled),
+.stair-tile:hover:not(:disabled),
+.exit-tile:hover:not(:disabled) {
+  transform: none;
+  filter: brightness(1.09);
+}
+.interior-module.current-floor {
+  border-bottom-color: #32694e;
+  border-bottom-width: 6px;
+}
+.interior-module:disabled,
+.stair-tile:disabled,
+.exit-tile:disabled {
+  opacity: 0.72;
+}
+.interior-module.busy {
+  filter: grayscale(0.65);
+}
+.interior-module.busy.current-floor {
+  opacity: 1;
+}
+.interior-module.selected {
+  border: 4px solid #277c50;
+  box-shadow:
+    inset 0 0 0 5px #fff8d8,
+    0 0 15px #8ed29b;
+}
+.module-floor {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  max-width: calc(100% - 12px);
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: #fffbeced;
+  color: #493b30;
+  font:
+    700 10px Georgia,
+    serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.module-meta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1px 7px;
+  min-height: 33px;
+  padding: 4px;
+  background: #fffaf1e8;
+  color: #3f473c;
+  font-size: 10px;
+}
+.module-meta strong {
+  font-size: 12px;
+}
+.module-meta small {
+  font-size: 10px;
+}
+.module-meta .place-status {
+  white-space: nowrap;
+}
+.interior-module.selected .module-meta {
+  background: #32694eef;
+  color: white;
+}
+.interior-module.busy .module-meta {
+  background: #5f5855d9;
+  color: white;
+}
+.stair-tile {
+  background: url("../assets/interior-stairs.webp") center / 100% 100% no-repeat;
+}
+.stair-tile:hover:not(:disabled) {
+  background: url("../assets/interior-stairs.webp") center / 100% 100% no-repeat;
+}
+.exit-tile {
+  background: url("../assets/interior-exit.webp") center / 100% 100% no-repeat;
+}
+.exit-tile:hover:not(:disabled) {
+  background: url("../assets/interior-exit.webp") center / 100% 100% no-repeat;
+}
+.stair-tile-label {
+  position: absolute;
+  right: 6px;
+  bottom: 9px;
+  left: 6px;
+  padding: 5px;
+  border-radius: 7px;
+  background: #fff9e8ef;
+  color: #564330;
+  font:
+    700 12px Georgia,
+    serif;
+  text-align: center;
+}
+.exit-tile .stair-tile-label {
+  background: #e2f0dcef;
+}
+.exit-door-action,
+.exit-door-action:hover:not(:disabled) {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transform: none;
+  pointer-events: auto;
+}
+.exit-door-action:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+.exit-door-label {
+  padding: 5px 12px;
+  border-radius: 7px;
+  background: #e2f0dcef;
+  color: #564330;
+  font:
+    700 12px Georgia,
+    serif;
+}

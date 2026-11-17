@@ -1,0 +1,122 @@
+.character {
+  --facing: 1;
+  position: absolute;
+  z-index: 4;
+  bottom: 18%;
+  left: 50%;
+  width: 100px;
+  height: 150px;
+  transform: translateX(-50%) scaleX(var(--facing));
+  pointer-events: none;
+}
+.part {
+  display: block;
+  position: absolute;
+  background: url("../assets/character.webp") no-repeat;
+}
+.character::before,
+.character::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 79px;
+  width: 15px;
+  height: 19px;
+  border: 3px solid #6f5037;
+  background: #a9cbb5;
+  border-radius: 50%;
+}
+.character::before {
+  left: 18px;
+}
+.character::after {
+  right: 18px;
+}
+.head {
+  z-index: 4;
+  top: -4px;
+  left: 1px;
+  width: 98px;
+  height: 98px;
+  background-size: 300% 200%;
+  background-position: 0 0;
+}
+.torso {
+  z-index: 3;
+  top: 68px;
+  left: 14px;
+  width: 72px;
+  height: 65px;
+  background-size: 300% 200%;
+  background-position: 50% 0;
+}
+.arm-left,
+.arm-right {
+  z-index: 2;
+  top: 70px;
+  width: 34px;
+  height: 62px;
+  transform-origin: 50% 16%;
+  background-size: 300% 200%;
+}
+.arm-left {
+  left: 5px;
+  background-position: 100% 0;
+  transform: rotate(3deg);
+}
+.arm-right {
+  right: 5px;
+  background-position: 0 100%;
+  transform: rotate(-3deg);
+}
+.leg-left,
+.leg-right {
+  z-index: 1;
+  top: 107px;
+  width: 36px;
+  height: 48px;
+  transform-origin: 50% 8%;
+  background-size: 300% 200%;
+}
+.leg-left {
+  left: 21px;
+  background-position: 50% 100%;
+}
+.leg-right {
+  right: 21px;
+  background-position: 100% 100%;
+}
+.walking .arm-left {
+  animation: arm-swing 0.48s ease-in-out infinite alternate;
+}
+.walking .arm-right {
+  animation: arm-swing 0.48s ease-in-out infinite alternate-reverse;
+}
+.walking .leg-left {
+  animation: footstep 0.48s ease-in-out infinite alternate;
+}
+.walking .leg-right {
+  animation: footstep 0.48s ease-in-out infinite alternate-reverse;
+}
+@keyframes arm-swing {
+  from {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+@keyframes footstep {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+.inside .character {
+  bottom: calc(
+    var(--interior-base, 17%) + var(--floor, 0) * var(--floor-height, 195px) -
+      var(--floor-shift, 0px) + 12px
+  );
+}

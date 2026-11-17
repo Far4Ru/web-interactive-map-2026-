@@ -1,0 +1,267 @@
+@media (max-width: 550px) {
+  .inside {
+    --interior-base: 22%;
+  }
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wallet strong,
+  .clock strong {
+    font-size: 13px;
+  }
+  .wallet,
+  .coins,
+  .clock {
+    padding: 3px 7px;
+    min-height: 37px;
+  }
+  .coins {
+    gap: 2px;
+  }
+  .coins .icon-coin {
+    width: 30px;
+    height: 30px;
+  }
+  .profile-button {
+    width: 38px;
+    min-height: 37px;
+  }
+  .profile-button .icon {
+    width: 29px;
+    height: 29px;
+  }
+  .mode select {
+    min-height: 37px;
+    font-size: 11px;
+    max-width: 130px;
+  }
+  .quick-nav {
+    top: 100px;
+  }
+  .quick-nav button {
+    width: 38px;
+    min-height: 38px;
+  }
+  .quick-nav .icon {
+    width: 27px;
+    height: 27px;
+  }
+  .noticeboard {
+    width: 145px;
+    height: 145px;
+  }
+  .noticeboard-sign {
+    width: 145px;
+    height: 145px;
+  }
+  .venue {
+    width: 245px;
+    height: 245px;
+  }
+  .venue-sign {
+    width: 170px;
+    height: 170px;
+    top: -92px;
+  }
+  .character {
+    transform: translateX(-50%) scaleX(var(--facing)) scale(0.83);
+  }
+  .interior-toolbar {
+    top: auto;
+    bottom: 8px;
+    transform: none;
+    width: calc(50% - 14px);
+    gap: 5px;
+    padding: 5px;
+  }
+  .interior-toolbar > div {
+    max-width: 130px;
+  }
+  .interior-session-label select {
+    max-width: 120px;
+  }
+  .interior-toolbar-left {
+    left: 8px;
+  }
+  .interior-toolbar-right {
+    right: 8px;
+  }
+  .inside .interior-controls {
+    position: absolute;
+    z-index: 6;
+    bottom: calc(var(--interior-base) - 47px);
+    left: 50%;
+    display: flex;
+    gap: 12px;
+    transform: translateX(-50%);
+  }
+  .interior-controls button {
+    min-width: 88px;
+    min-height: 40px;
+    padding: 7px 12px;
+    border: 1px solid #aec6ac;
+    background: #fffdf3f2;
+    box-shadow: 0 3px 0 #63876540;
+    touch-action: none;
+    user-select: none;
+  }
+  .module-meta {
+    font-size: 8px;
+    gap: 0 3px;
+  }
+  .module-meta strong,
+  .module-meta small {
+    font-size: 9px;
+  }
+  .stair-tile-label {
+    font-size: 10px;
+  }
+  dialog,
+  .booking-panel {
+    width: calc(100% - 12px);
+    max-height: 95svh;
+    border-radius: 18px;
+  }
+  .panel-header {
+    padding: 18px;
+  }
+  #panel-content {
+    padding: 16px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .town-map {
+    aspect-ratio: 1.5;
+  }
+  .map-pin {
+    width: 16%;
+  }
+  .map-label {
+    font-size: 8px;
+    padding: 3px 5px;
+  }
+  .venue-list {
+    gap: 8px;
+  }
+  .venue-card {
+    padding: 10px;
+    grid-template-columns: 45px 1fr;
+    gap: 6px;
+  }
+  .venue-card .building-art {
+    width: 45px;
+  }
+  .venue-card h3 {
+    font-size: 13px;
+  }
+  .venue-card small {
+    font-size: 9px;
+  }
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filters label:first-child {
+    grid-column: 1/-1;
+  }
+  .filters .text-button {
+    grid-column: auto;
+  }
+  .place-grid {
+    gap: 5px;
+    padding: 0;
+  }
+  .place {
+    min-height: 58px;
+  }
+  .place small {
+    font-size: 7px;
+  }
+  .place strong {
+    font-size: 15px;
+  }
+  .place-row {
+    flex-direction: column;
+    gap: 3px;
+  }
+  .booking-summary {
+    padding: 18px;
+    grid-template-columns: 1fr;
+  }
+  .booking-summary > * {
+    grid-column: 1 !important;
+  }
+  .stage-label {
+    margin-inline: 10px;
+    font-size: 8px;
+  }
+  .profile-intro {
+    gap: 15px;
+  }
+  .avatar {
+    width: 90px;
+    height: 130px;
+  }
+  .avatar .character {
+    transform: translateX(-50%) scale(0.65);
+    bottom: -10px;
+  }
+  .profile-intro p {
+    font-size: 12px;
+  }
+  .badge {
+    font-size: 9px;
+  }
+  .balance-cards {
+    grid-template-columns: 1fr;
+  }
+  .reset-section {
+    align-items: start;
+    flex-direction: column;
+  }
+  .reservation {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+  }
+  .reservation > .building-art {
+    width: 65px;
+  }
+  .reservation-info {
+    min-width: 160px;
+  }
+  .reservation-info h3 {
+    font-size: 17px;
+  }
+  .reservation-action {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .event-tray {
+    width: min(250px, calc(100vw - 24px));
+  }
+  .event-dock {
+    top: 100px;
+    left: 10px;
+  }
+  .event-shortcut {
+    width: 65px;
+  }
+  .event-shortcut-button {
+    width: 38px;
+    height: 38px;
+  }
+  .event-shortcut-button .icon {
+    width: 27px;
+    height: 27px;
+  }
+  .event-card h3 {
+    font-size: 16px;
+  }
+  .event-timer {
+    font-size: 10px;
+  }
+}

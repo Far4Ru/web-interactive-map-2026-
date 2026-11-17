@@ -1,0 +1,102 @@
+.town-map {
+  background: url("../assets/map.webp") center / cover;
+  aspect-ratio: 1.5;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #cddbc7;
+  overflow: hidden;
+}
+.map-panel {
+  width: min(1250px, calc(100% - 32px));
+}
+dialog.map-panel {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100svh;
+  max-height: 100svh;
+  border-radius: 0;
+  margin: 0;
+}
+.map-pin {
+  position: absolute;
+  width: 13.5%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -100%);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.map-pin:hover:not(:disabled) {
+  background: transparent;
+  transform: translate(-50%, -100%) scale(1.08);
+}
+.map-pin:hover .building-art,
+.map-pin:focus-visible .building-art {
+  filter: drop-shadow(0 0 5px #fff9ae);
+}
+.map-pin .building-art {
+  width: 100%;
+}
+.map-label {
+  position: absolute;
+  top: -5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--paper);
+  font-size: 11px;
+  white-space: nowrap;
+  margin-top: 0;
+  box-shadow: 0 2px 6px #0001;
+}
+.venue-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+.venue-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  align-items: center;
+  column-gap: 10px;
+}
+.venue-card .building-art {
+  width: 66px;
+}
+.venue-card small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.venue-card h3 {
+  margin: 0;
+  font-size: 17px;
+}
+.venue-card button {
+  font-size: 11px;
+  padding: 8px;
+}
+.venue-card .text-button {
+  grid-column: 1/-1;
+}
+.venue-card button:last-child {
+  grid-column: 1/-1;
+}
+.coral {
+  background: #fbede3;
+}
+.mint {
+  background: #eaf1e4;
+}
+.lavender {
+  background: #f0ebf5;
+}
+.butter {
+  background: #faf3d9;
+}

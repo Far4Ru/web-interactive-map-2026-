@@ -1,0 +1,109 @@
+@media (max-width: 900px) {
+  .topbar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    gap: 6px;
+    justify-content: space-between;
+  }
+  .wallet,
+  .coins,
+  .clock,
+  .mode select,
+  .profile-button {
+    min-height: 43px;
+  }
+  .wallet,
+  .coins,
+  .clock {
+    padding: 5px 9px;
+  }
+  .wallet strong,
+  .clock strong {
+    font-size: 15px;
+  }
+  .coins .icon-coin {
+    width: 32px;
+    height: 32px;
+  }
+  .mode select {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .profile-button {
+    width: 43px;
+  }
+  .quick-nav {
+    top: 61px;
+    right: 10px;
+  }
+  .quick-nav button {
+    width: 43px;
+    min-height: 40px;
+  }
+  .quick-nav .icon {
+    width: 29px;
+    height: 29px;
+  }
+  .venue {
+    width: 290px;
+    height: 290px;
+  }
+  .noticeboard {
+    width: 200px;
+    height: 200px;
+    padding: 25px 25px 49px;
+  }
+  .noticeboard-sign,
+  .venue-sign {
+    width: 200px;
+    height: 200px;
+  }
+  .venue-sign {
+    top: -110px;
+  }
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .booking-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .booking-summary h3,
+  .booking-summary .eyebrow,
+  #selection-summary,
+  .total,
+  #booking-error,
+  #confirm-booking,
+  .booking-summary > small {
+    grid-column: 1/-1;
+  }
+  .venue-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .interior-toolbar {
+    width: 140px;
+    padding: 8px;
+  }
+  .interior-toolbar button {
+    font-size: 11px;
+    padding: 7px 10px;
+    min-height: 36px;
+  }
+}
+@media (max-height: 580px) {
+  .scene {
+    min-height: 100svh;
+  }
+  .venue {
+    width: min(40svh, 250px);
+    height: min(40svh, 250px);
+  }
+  .noticeboard {
+    width: 160px;
+    height: 160px;
+  }
+  .interior-toolbar {
+    bottom: 8px;
+  }
+}

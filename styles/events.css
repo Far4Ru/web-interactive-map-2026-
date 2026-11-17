@@ -1,0 +1,104 @@
+.event-tray {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  max-height: 72svh;
+  overflow-y: auto;
+  width: min(290px, calc(100vw - 32px));
+  display: grid;
+  gap: 10px;
+  pointer-events: none;
+}
+.event-tray:empty,
+.event-dock:empty {
+  display: none;
+}
+.event-dock {
+  position: fixed;
+  z-index: 8;
+  top: 83px;
+  left: 18px;
+  display: grid;
+  gap: 10px;
+  max-height: calc(100svh - 100px);
+  overflow-y: auto;
+}
+.event-shortcut {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 78px;
+}
+.event-shortcut-button {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  padding: 5px;
+  border: 1px solid #aec6ac;
+  border-radius: 15px;
+  background: #fffdf3ec;
+  box-shadow: 0 3px 0 #63876540;
+}
+.event-shortcut-button .icon {
+  width: 34px;
+  height: 34px;
+}
+.event-shortcut .event-timer {
+  display: block;
+  margin: 0;
+  padding: 3px 5px;
+  border-radius: 7px;
+  background: #fffdf3ec;
+  text-align: center;
+  line-height: 1.2;
+}
+.event-card {
+  padding: 16px;
+  border: 1px solid #e4dfca;
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 6px 25px #0001;
+  pointer-events: auto;
+}
+.event-card h3 {
+  font-size: 19px;
+}
+.event-card p {
+  font-size: 11px;
+}
+.event-timer {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.event-toggle {
+  width: 100%;
+  font-size: 11px;
+  min-height: 36px;
+}
+.event-art {
+  height: 100px;
+  background: url("../assets/town.webp") center / cover;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.event-art > .building-art {
+  width: 105px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.event-art .character {
+  transform: translateX(-50%) scale(0.5);
+  left: 28%;
+  bottom: -25px;
+}
+.event-art.active {
+  background: #ede9dd;
+}

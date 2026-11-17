@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e9efde" />
+    <meta
+      name="description"
+      content="Тихий город — маленький мир для больших планов. Гуляйте, выбирайте места и создавайте учебные бронирования."
+    />
+    <title>Тихий город — маленький мир, большие планы</title>
+    <link rel="icon" href="assets/map.webp" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/hud.css" />
+    <link rel="stylesheet" href="styles/scene.css" />
+    <link rel="stylesheet" href="styles/character.css" />
+    <link rel="stylesheet" href="styles/interior.css" />
+    <link rel="stylesheet" href="styles/dialog.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+    <link rel="stylesheet" href="styles/booking.css" />
+    <link rel="stylesheet" href="styles/account.css" />
+    <link rel="stylesheet" href="styles/events.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/mobile.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <main id="app">
+      <header class="topbar">
+        <div class="wallet">
+          <strong id="balance" aria-label="Баланс в рублях">0 ₽</strong>
+        </div>
+        <div class="coins" title="Монеты за посещённые события">
+          <span class="icon icon-coin" aria-hidden="true"></span
+          ><span class="sr-only">Монеты:</span> <b id="coins">0</b>
+        </div>
+        <div class="clock">
+          <strong id="clock" aria-label="Время">09:00</strong>
+        </div>
+        <label class="mode"
+          ><span class="sr-only">Режим времени</span
+          ><select id="mode">
+            <option value="demo60">Демо ×60</option>
+            <option value="demo360">Демо ×360</option>
+            <option value="real">Реальное время</option>
+          </select></label
+        >
+        <button
+          class="profile-button"
+          id="profile-button"
+          aria-label="Открыть профиль"
+        >
+          <span class="icon icon-profile" aria-hidden="true"></span
+          ><span>Мой профиль</span>
+        </button>
+      </header>
+      <nav class="quick-nav" aria-label="Навигация">
+        <button
+          id="map-button"
+          aria-label="Карта города (M)"
+          title="Карта города (M)"
+        >
+          <span class="icon icon-map" aria-hidden="true"></span>
+        </button>
+        <button
+          id="bookings-button"
+          aria-label="Мои бронирования"
+          title="Мои бронирования"
+        >
+          <span class="icon icon-ticket" aria-hidden="true"></span
+          ><span id="booking-count" class="count">0</span>
+        </button>
+        <button id="help-button" aria-label="Как играть" title="Как играть">
+          <span class="icon icon-help" aria-hidden="true"></span>
+        </button>
+      </nav>
+
+      <section id="scene" class="scene" aria-label="Прогулка по городу">
+        <div id="landscape" class="landscape"></div>
+        <div id="world" class="world"></div>
+        <div id="character" class="character" aria-label="Мишка Мико">
+          <span class="part leg-left"></span><span class="part leg-right"></span
+          ><span class="part arm-left"></span
+          ><span class="part arm-right"></span><span class="part torso"></span
+          ><span class="part head"></span>
+        </div>
+        <div
+          class="interior-toolbar interior-toolbar-left"
+          id="interior-toolbar"
+          hidden
+        >
+          <button id="leave-building">В город</button>
+          <div>
+            <strong id="interior-title"></strong>
+            <span id="interior-floor-label"></span>
+          </div>
+        </div>
+        <div
+          class="interior-toolbar interior-toolbar-right"
+          id="interior-actions"
+          hidden
+        >
+          <label class="interior-session-label"
+            >Событие
+            <select id="interior-session"></select
+          ></label>
+          <button class="primary" id="open-booking">
+            Выбрать места <span id="interior-selected-count">0</span>
+          </button>
+        </div>
+        <div class="interior-controls" id="interior-controls" hidden>
+          <button type="button" id="move-left" aria-label="Идти влево">
+            Влево
+          </button>
+          <button type="button" id="move-right" aria-label="Идти вправо">
+            Вправо
+          </button>
+        </div>
+      </section>
+      <aside
+        id="event-tray"
+        class="event-tray"
+        aria-label="Текущие события"
+      ></aside>
+      <aside
+        id="event-dock"
+        class="event-dock"
+        aria-label="Свёрнутые события"
+      ></aside>
+    </main>
+    <dialog id="panel" aria-labelledby="panel-title">
+      <header class="panel-header">
+        <div>
+          <span class="eyebrow" id="panel-kicker">ТИХИЙ ГОРОД</span>
+          <h2 id="panel-title"></h2>
+        </div>
+        <button id="close-panel" class="close-button" aria-label="Закрыть окно">
+          ×
+        </button>
+      </header>
+      <div id="panel-content"></div>
+    </dialog>
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      popover="manual"
+      hidden
+    ></div>
+    <noscript
+      >Для прогулки и бронирования включите JavaScript в браузере.</noscript
+    >
+  </body>
+</html>

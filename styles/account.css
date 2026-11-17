@@ -1,0 +1,129 @@
+.reservations {
+  display: grid;
+  gap: 15px;
+}
+.reservation-group + .reservation-group {
+  margin-top: 30px;
+}
+.reservation-group-title {
+  margin: 20px 0 12px;
+  font-size: 20px;
+}
+.reservation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+}
+.reservation > .building-art {
+  width: 110px;
+}
+.reservation-info {
+  flex: 1;
+}
+.reservation-info p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.reservation-action {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: end;
+}
+.reservation-action > strong {
+  font-size: 22px;
+}
+.danger-outline {
+  color: #975141;
+  border-color: #dfc9bd;
+  font-size: 12px;
+}
+.empty-state {
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+.empty-symbol {
+  font-size: 65px;
+  color: #b57e5c;
+  display: block;
+  margin-bottom: 20px;
+}
+.profile-intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 26px;
+}
+.avatar {
+  position: relative;
+  width: 140px;
+  height: 170px;
+  background: #e4ead8;
+  border-radius: 60px 60px 25px 25px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.avatar .character {
+  bottom: 15px;
+  transform: translateX(-50%) scale(0.8);
+}
+.badge {
+  background: #e4eddf;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+.balance-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.balance-cards > div {
+  background: #f0f0e5;
+  padding: 22px;
+  border-radius: 16px;
+}
+.balance-cards strong {
+  display: block;
+  font-size: 28px;
+  margin: 9px 0;
+}
+.balance-cards small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.topup-form {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 18px;
+}
+.reset-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 25px;
+}
+.reset-section p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.reset-section h3 {
+  font-size: 17px;
+}
+.help-list {
+  line-height: 1.8;
+  padding-left: 25px;
+}
+.help-list li {
+  margin-bottom: 15px;
+  padding-left: 7px;
+  font-size: 14px;
+}
